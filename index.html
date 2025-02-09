@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MC Creepers</title>
+    <!-- Police pixelisée pour le compteur -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" type="module" defer></script>
+  </head>
+  <body>
+    <!-- Lien vers la page du monstre -->
+    <a href="monstre.html" id="monsterLink">Monstre</a>
+    
+    <!-- Compteur de niveau en haut à gauche -->
+    <div id="levelCounter">Niveau : 1</div>
+    
+    <!-- Conteneur du jeu : centré grâce au CSS -->
+    <div id="gameContainer">
+      <canvas id="gameCanvas" width="800" height="800"></canvas>
+      <!-- Steve est un élément HTML stylisé via CSS -->
+      <div id="steve">
+        <div class="head"></div>
+        <div class="body"></div>
+        <div class="left-arm"></div>
+        <div class="right-arm"></div>
+        <div class="left-leg"></div>
+        <div class="right-leg"></div>
+      </div>
+    </div>
+  </body>
+</html>

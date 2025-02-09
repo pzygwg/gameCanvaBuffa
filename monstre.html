@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Creeper Monster</title>
+    <style>
+      body {
+        background: url('/assets/cobblestone.png') repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .creeper {
+        position: relative;
+        width: 200px;
+        height: 200px;
+      }
+
+      .head {
+        width: 100px;
+        height: 100px;
+        background-color: #069307;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .face {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        gap: 0;
+      }
+
+      .pixel {
+        background-color: #069307;
+        width: 100%;
+        height: 100%;
+      }
+
+      .pixel.black {
+        background-color: black;
+      }
+
+      .body {
+        width: 60px;
+        height: 80px;
+        background-color: #069307;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .leg {
+        width: 20px;
+        height: 60px;
+        background-color: #069307;
+        position: absolute;
+        top: 180px;
+      }
+
+      .leg.left {
+        left: 70px;
+      }
+
+      .leg.right {
+        right: 70px;
+      }
+
+      .arm {
+        width: 20px;
+        height: 60px;
+        background-color: #069307;
+        position: absolute;
+        top: 110px;
+      }
+
+      .arm.left {
+        left: 40px;
+        transform: rotate(20deg);
+      }
+
+      .arm.right {
+        right: 40px;
+        transform: rotate(-20deg);
+      }
+
+      .back-link {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        background-color: #069307;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-family: 'Press Start 2P', cursive;
+      }
+
+      .back-link:hover {
+        background-color: #047205;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html" class="back-link">Retour au jeu</a>
+    <div class="creeper">
+      <div class="head">
+        <div class="face">
+          <!-- Row 1 -->
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <!-- Row 2 -->
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <!-- Row 3 -->
+          <div class="pixel"></div>
+          <div class="pixel black"></div>
+          <div class="pixel black"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel black"></div>
+          <div class="pixel black"></div>
+          <div class="pixel"></div>
+          <!-- Row 4 -->
+          <div class="pixel"></div>
+          <div class="pixel black"></div>
+          <div class="pixel black"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel black"></div>
+          <div class="pixel black"></div>
+          <div class="pixel"></div>
+          <!-- Row 5 -->
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel black"></div>
+          <div class="pixel black"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <!-- Row 6 -->
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel black"></div>
+          <div class="pixel black"></div>
+          <div class="pixel black"></div>
+          <div class="pixel black"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <!-- Row 7 -->
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel black"></div>
+          <div class="pixel black"></div>
+          <div class="pixel black"></div>
+          <div class="pixel black"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <!-- Row 8 -->
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel black"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+          <div class="pixel black"></div>
+          <div class="pixel"></div>
+          <div class="pixel"></div>
+        </div>
+      </div>
+      <div class="body"></div>
+      <div class="leg left"></div>
+      <div class="leg right"></div>
+      <div class="arm left"></div>
+      <div class="arm right"></div>
+    </div>
+  </body>
+</html> 

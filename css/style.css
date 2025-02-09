@@ -1,0 +1,134 @@
+/* --- Basic Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Add background to body */
+  body {
+    background: url('/assets/cobblestone.png') repeat;
+  }
+  
+  /* --- Compteur de niveau --- */
+  #levelCounter {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    z-index: 100;
+  }
+  
+  /* --- Conteneur du jeu centré --- */
+  #gameContainer {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    margin: 50px auto;  /* centre horizontalement et avec un petit margin vertical */
+  }
+  
+  /* --- Styles pour Steve --- */
+  #steve {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    left: 30px; /* position initiale, mise à jour en JS */
+    top: 30px;  /* position initiale, mise à jour en JS */
+    transform: translate(-50%, -50%);
+    z-index: 5;
+  }
+  
+  /* La tête de Steve utilise l'image téléchargée */
+  #steve .head {
+    width: 50px;
+    height: 50px;
+    background: url('/assets/head.png') no-repeat center;
+    background-size: cover;
+  }
+  
+  /* Le corps et les membres de Steve */
+  #steve .body {
+    width: 50px;
+    height: 40px;
+    background: blue;
+  }
+  
+  #steve .left-arm,
+  #steve .right-arm {
+    width: 10px;
+    height: 40px;
+    background: blue;
+    position: absolute;
+    top: 50px;
+  }
+  
+  #steve .left-arm {
+    left: -10px;
+  }
+  
+  #steve .right-arm {
+    right: -10px;
+  }
+  
+  #steve .left-leg,
+  #steve .right-leg {
+    width: 15px;
+    height: 40px;
+    background: purple;
+    position: absolute;
+    top: 90px;
+  }
+  
+  #steve .left-leg {
+    left: 5px;
+  }
+  
+  #steve .right-leg {
+    right: 5px;
+  }
+  
+  /* Animation de marche */
+  @keyframes walk {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(20deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  #steve.walking .left-leg {
+    animation: walk 0.5s infinite;
+  }
+  
+  #steve.walking .right-leg {
+    animation: walk 0.5s infinite reverse;
+  }
+  
+  /* --- Canvas --- */
+  canvas {
+    border: 1px solid #ccc;
+    display: block;
+    background: url('/assets/mossycobblestone.png') repeat;
+    /* Le canvas est contenu dans #gameContainer, qui est centré */
+  }
+  
+  #monsterLink {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    background: #069307;
+    padding: 5px 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    z-index: 100;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  #monsterLink:hover {
+    background: #047205;
+  }
+  
